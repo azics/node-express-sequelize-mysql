@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "test_user2",
+    "password": "password",
+    "database": "test_db",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "test_user2",
+    "password": "password",
+    "database": "test_db",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "test_user2",
+    "password": "password",
+    "database": "test_db",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+}
