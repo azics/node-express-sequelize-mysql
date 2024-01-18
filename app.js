@@ -13,7 +13,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res) => console.log("=======", process.env.PORT, req));
+app.use((req, res) => console.log("=======", process.env.PORT));
 
 // Routes
 app.use('/api', require('./routes'));
