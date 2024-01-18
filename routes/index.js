@@ -21,6 +21,6 @@ router.put('/subscribers/:id', subscribersController.updateSubscriber);
 router.delete('/subscribers/:id', subscribersController.deleteSubscriber);
 
 router.post('/subscriberBulk', subscribersController.subscriberBulk); // exporting
-router.get('/getAllSubscribersGrouped', subscribersController.getAllSubscribersGrouped); // groupingByRegion
+router.get('/subscribersGrouped', subscribersController.getAllSubscribersGrouped); // groupingByRegion
 
 module.exports = router;
