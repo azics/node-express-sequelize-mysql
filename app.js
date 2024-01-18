@@ -19,7 +19,7 @@ app.use((req, res) => console.log("=======", process.env.PORT));
 app.use('/api', require('./routes'));
 
 // Start the server
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
