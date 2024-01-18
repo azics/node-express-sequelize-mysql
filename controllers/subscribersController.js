@@ -15,7 +15,7 @@ exports.subscriberBulk = async (req, res) => {
 exports.getAllSubscribersGrouped = async (req, res) => {
     try {
         // Custom SQL query
-        const customQuery = `SELECT COALESCE(region, 'Grand Total') as region, SUM(subscribers) as totalSubscribers FROM Subscribers GROUP BY region WITH ROLLUP`;
+        const customQuery = `SELECT COALESCE(region, 'Grand Total') as region, SUM(item) as item, SUM(units) as units, SUM(subscribers) as subscribers FROM Subscribers GROUP BY region WITH ROLLUP`;
 
         const subscribers = await sequelize.query(customQuery, { type: sequelize.QueryTypes.SELECT });
         res.status(200).json(subscribers);
