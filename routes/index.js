@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const subscribersController = require('../controllers/subscribersController');
+const fileUploadController = require('../controllers/fileUploadController');
 
 // CRUD Routes
 
