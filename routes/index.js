@@ -2,6 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
+const multerMW = require('../midleware/multer.mw');
 const subscribersController = require('../controllers/subscribersController');
 const fileUploadController = require('../controllers/fileUploadController');
 
@@ -23,5 +24,7 @@ router.delete('/subscribers/:id', subscribersController.deleteSubscriber);
 
 router.post('/subscriberBulk', subscribersController.subscriberBulk); // exporting
 router.get('/subscribersGrouped', subscribersController.getAllSubscribersGrouped); // groupingByRegion
+
+router.post('/upload', multerMW.single('file'), fileUploadController.fileUpload);
 
 module.exports = router;
